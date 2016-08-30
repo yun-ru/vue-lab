@@ -7,14 +7,18 @@
 <script>
     export default {
         replace: false,
-        props: ['name'],
+        props: {
+            name: {
+                type: String,
+                required: true
+            }
+        },
         data() {
             return {
                 title: "foo"
             }
         },
-        ready() {
-        },
+        ready() {},
         methods: {
             changeTitle() {
                 this.title = "fooooooo"
@@ -22,4 +26,3 @@
         }
     }
 </script>
-

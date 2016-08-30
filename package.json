@@ -2,7 +2,6 @@
   "name": "01",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --inline --hot --content-base --port 3030"
   },

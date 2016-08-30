@@ -21,6 +21,7 @@ var router = new VueRouter();
 
 router.map({
     '/': {
+        name: "home",
         component: Welcome
     },
     'base': {
@@ -61,11 +62,11 @@ router.map({
                             template: '<p>Default sub view for Foo</p>'
                         }
                     },
-                    '/bar': {
+                    '/bar/:msg': {
                         name: 'bar',
                         component: Bar
                     },
-                    '/foo/:username': {
+                    '/foo': {
                         name: 'foo',
                         component: Foo
                     }
@@ -73,6 +74,10 @@ router.map({
             }
         }
     }
+})
+
+router.redirect({
+  '*': '/'
 })
 
 router.start(App, 'body');
