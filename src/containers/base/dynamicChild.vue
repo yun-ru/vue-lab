@@ -1,9 +1,27 @@
 <template>
     <h3>Dynamic Children</h3>
-    <p>Change Child to ... </p>
-    <button class="btn btn-link" @click='changeChild("bar")'>Bar</button>
-    <button class="btn btn-link" @click='changeChild("foo")'>Foo</button>
-    <component :is='myChild'></component>
+    <br>
+    <div>
+        <button class="btn btn-default" @click="changeAnimateChild('ruby')">Ruby</button>
+        <button class="btn btn-default" @click="changeAnimateChild('daniel')">Daniel</button>
+        <component :is='animateChild' transition="fade" transition-mode="out-in"></component>
+    </div>
+    <hr>
+    <div>
+        <button class="btn btn-default" @click='changeChild("bar")'>Bar</button>
+        <button class="btn btn-default" @click='changeChild("foo")'>Foo</button>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-6">
+            <p class="text-muted">Change Child to (keep alive) ...</p>
+            <component :is='myChild' keep-alive></component>
+        </div>
+        <div class="col-sm-6">
+            <p class="text-muted">Change Child to ...</p>
+            <component :is='myChild'></component>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -12,19 +30,38 @@
     export default {
         data() {
             return {
-                myChild: 'foo'
+                myChild: 'foo',
+                animateChild: 'ruby'
             }
         },
         methods: {
             changeChild(name) {
                 this.myChild = name
+            },
+            changeAnimateChild(name) {
+                this.animateChild = name
             }
         },
         components: {
             foo: Foo,
-            bar: Bar
+            bar: Bar,
+            ruby: {
+                template: "<h1>Hi Ruby</p>"
+            },
+            daniel: {
+                template: "<h1>Hi Daniel</p>"
+            }
         }
     }
 
 </script>
+
+<style>
+    .fade-transition {
+        transition: opacity .3s ease;
+    }
+    .fade-enter, .fade-leave {
+        opacity: 0;
+    }
+</style>
 

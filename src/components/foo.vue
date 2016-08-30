@@ -1,6 +1,6 @@
 <template>
-    <h1 class="title">{{title}}</h1>
-    <h3>{{$route.params.username}}</h3>
+    <h3 class="title">{{title}}</h3>
+    <button @click="changeTitle">Change Title</button>
 </template>
 
 <script>
@@ -8,6 +8,11 @@
         data() {
             return {
                 title: "foo"
+            }
+        },
+        methods: {
+            changeTitle() {
+                this.title = "fooooooo"
             }
         }
     }
