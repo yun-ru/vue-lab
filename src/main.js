@@ -11,6 +11,7 @@ import Resource from './containers/base/resource.vue';
 import Router from './containers/base/router.vue';
 import Slot from './containers/base/slot.vue';
 import DynamicChild from './containers/base/dynamicChild.vue';
+import Props from './containers/base/props.vue';
 
 
 Vue.use(VueRouter);
@@ -30,6 +31,10 @@ router.map({
                 component: {
                     template: '<p>Default sub view for Foo</p>'
                 }
+            },
+            '/props': {
+                name: 'props',
+                component: Props
             },
             '/dynamic-child': {
                 name: 'dynamicChild',

@@ -5,6 +5,7 @@
         <a class="btn btn-link" v-link='{name: "emit"}'>Emit</a>
         <a class="btn btn-link" v-link='{name: "resource"}'>Resource</a>
         <a class="btn btn-link" v-link='{name: "dynamicChild"}'>DynamicChild</a>
+        <a class="btn btn-link" v-link='{name: "props"}'>Props</a>
     </div>
     <hr>
     <router-view></router-view>
