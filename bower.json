@@ -1,0 +1,20 @@
+{
+  "name": "01",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Ruby Chen <ruby@yun-ru.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/yun-ru/vue-lab",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

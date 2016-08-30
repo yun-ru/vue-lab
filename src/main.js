@@ -2,12 +2,15 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource'
 import App from './containers/app.vue';
+import Welcome from './containers/welcome.vue';
 import Foo from './components/foo.vue';
 import Bar from './components/bar.vue';
 import Base from './containers/base/index.vue';
 import Emit from './containers/base/emit.vue';
 import Resource from './containers/base/resource.vue';
 import Router from './containers/base/router.vue';
+import Slot from './containers/base/slot.vue';
+import DynamicChild from './containers/base/dynamicChild.vue';
 
 
 Vue.use(VueRouter);
@@ -16,13 +19,25 @@ Vue.use(VueResource);
 var router = new VueRouter();
 
 router.map({
+    '/': {
+        component: Welcome
+    },
     'base': {
+        name: 'base',
         component: Base,
         subRoutes: {
             '/': {
                 component: {
                     template: '<p>Default sub view for Foo</p>'
                 }
+            },
+            '/dynamic-child': {
+                name: 'dynamicChild',
+                component: DynamicChild
+            },
+            '/slot': {
+                name: 'slot',
+                component: Slot
             },
             '/emit': {
                 name: 'emit',
