@@ -1,0 +1,34 @@
+{
+  "name": "01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline --hot --content-base --port 3030"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-runtime": "^6.12.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-runtime": "^6.11.6",
+    "css-loader": "^0.24.0",
+    "jade": "^1.11.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.3.1",
+    "vue-hot-reload-api": "^1.3.3",
+    "vue-html-loader": "^1.2.3",
+    "vue-loader": "^8.5.2",
+    "vue-router": "^0.7.13",
+    "vue-style-loader": "^1.0.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.0"
+  },
+  "dependencies": {
+    "vue": "^1.0.26",
+    "vue-resource": "^0.9.3"
+  }
+}
