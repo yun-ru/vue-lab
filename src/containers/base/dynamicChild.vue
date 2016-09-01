@@ -61,10 +61,16 @@
 
 <style>
     .fade-transition {
-        transition: opacity .3s ease;
+        transition: all .3s ease;
     }
     .fade-enter, .fade-leave {
         opacity: 0;
+    }
+    .fade-enter{
+        transform: translateX(-50px)
+    }
+    .fade-leave{
+        transform: translateX(50px);
     }
 </style>
 

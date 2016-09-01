@@ -14,8 +14,14 @@ import DynamicChild from './containers/base/dynamicChild.vue';
 import Props from './containers/base/props.vue';
 import Component from './containers/base/component.vue';
 
+
+import s01 from './containers/s01.vue'
+
 Vue.use(VueRouter);
 Vue.use(VueResource);
+
+console.log(Vue.config);
+Vue.config.debug = true;
 
 var router = new VueRouter();
 
@@ -23,6 +29,10 @@ router.map({
     '/': {
         name: "home",
         component: Welcome
+    },
+    's01': {
+        name: "s01",
+        component: s01
     },
     'base': {
         name: 'base',

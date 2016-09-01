@@ -1,10 +1,30 @@
 <template>
-    <h1 class="title">{{title}}</h1>
-    <nav>
-        <a class="btn btn-default" v-link='{path: "/"}'>Index</a>
-        <a class="btn btn-default" v-link='{name: "base"}'>Base</a>
-    </nav>
-    <router-view></router-view>
+    <div class="row">
+        <div class="col-sm-3">
+            <h3 class="title">{{title}}</h3>
+            <nav>
+                <a v-link='{path: "/"}'>Index</a>
+                <a v-link='{name: "s01"}'>01. Data Binding Syntax</a>
+                <a v-link='{name: "base"}'>02. Computed Properties</a>
+                <a v-link='{name: "base"}'>03. Class and Style Bindings</a>
+                <a v-link='{name: "base"}'>04. Conditional Rendering</a>
+                <a v-link='{name: "base"}'>05. List Rendering</a>
+                <a v-link='{name: "base"}'>06. Methods and Event Handling</a>
+                <a v-link='{name: "base"}'>07. Form Input Bindings</a>
+                <a v-link='{name: "base"}'>08. Transitions</a>
+                <a v-link='{name: "base"}'>09. Components</a>
+                <a v-link='{name: "base"}'>10. Reactivity in Depth</a>
+                <a v-link='{name: "base"}'>11. Custom Directives</a>
+                <a v-link='{name: "base"}'>12. Custom Filters</a>
+                <a v-link='{name: "base"}'>13. Mixins</a>
+            </nav>
+
+        </div>
+        <div class="col-sm-9">
+
+            <router-view></router-view>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -32,5 +52,9 @@
         padding: 20px
     nav
         padding: 10px 0
+        a
+            display: block
+            margin: 5px 0
+
 
 </style>
