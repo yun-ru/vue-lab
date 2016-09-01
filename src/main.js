@@ -14,7 +14,6 @@ import DynamicChild from './containers/base/dynamicChild.vue';
 import Props from './containers/base/props.vue';
 import Component from './containers/base/component.vue';
 
-
 Vue.use(VueRouter);
 Vue.use(VueResource);
 
@@ -22,6 +21,7 @@ var router = new VueRouter();
 
 router.map({
     '/': {
+        name: "home",
         component: Welcome
     },
     'base': {
@@ -66,11 +66,11 @@ router.map({
                             template: '<p>Default sub view for Foo</p>'
                         }
                     },
-                    '/bar': {
+                    '/bar/:msg': {
                         name: 'bar',
                         component: Bar
                     },
-                    '/foo/:username': {
+                    '/foo': {
                         name: 'foo',
                         component: Foo
                     }
@@ -78,6 +78,23 @@ router.map({
             }
         }
     }
+})
+
+router.redirect({
+  '*': '/'
+});
+
+router.beforeEach(function ({ to, next }) {
+  if (to.path === '/base/router') {
+      sessionStorage.setItem("isLogin",1);
+      return sessionStorage.getItem("isLogin")-0 ? true : false
+  } else {
+    next()
+  }
+})
+router.afterEach(function (transition) {
+  console.log(transition.to);
+  console.log(transition);
 })
 
 router.start(App, 'body');

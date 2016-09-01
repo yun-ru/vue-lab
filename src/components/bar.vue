@@ -1,5 +1,7 @@
 <template>
-    <h3 class="title">{{title}}</h3>
+    <h3>{{msg}}</h3>
+    <h3>{{num}}</h3>
+    <p class="text-info">{{$route.params.msg}}</p>
 </template>
 
 <script>
@@ -8,8 +10,27 @@
             return {
                 title: "bar"
             }
+        },
+        props: {
+            msg: {
+                coerce(name) {
+                    return name + ' is a good guy!'
+                }
+            },
+            num: {
+                validator(val) {
+                    return val > 10
+                }
+            }
+        },
+        ready() {
+            console.log(this)
         }
     }
 
 </script>
 
+<style lang="stylus">
+    .text-info
+        color: red
+</style>
