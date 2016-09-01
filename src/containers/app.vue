@@ -5,11 +5,11 @@
             <nav>
                 <a v-link='{path: "/"}'>Index</a>
                 <a v-link='{name: "s01"}'>01. Data Binding Syntax</a>
-                <a v-link='{name: "base"}'>02. Computed Properties</a>
-                <a v-link='{name: "base"}'>03. Class and Style Bindings</a>
-                <a v-link='{name: "base"}'>04. Conditional Rendering</a>
-                <a v-link='{name: "base"}'>05. List Rendering</a>
-                <a v-link='{name: "base"}'>06. Methods and Event Handling</a>
+                <a v-link='{name: "s02"}'>02. Computed Properties</a>
+                <a v-link='{name: "s03"}'>03. Class and Style Bindings</a>
+                <a v-link='{name: "s04"}'>04. Conditional Rendering</a>
+                <a v-link='{name: "s05"}'>05. List Rendering</a>
+                <a v-link='{name: "s06"}'>06. Methods and Event Handling</a>
                 <a v-link='{name: "base"}'>07. Form Input Bindings</a>
                 <a v-link='{name: "base"}'>08. Transitions</a>
                 <a v-link='{name: "base"}'>09. Components</a>

@@ -16,6 +16,11 @@ import Component from './containers/base/component.vue';
 
 
 import s01 from './containers/s01.vue'
+import s02 from './containers/s02.vue'
+import s03 from './containers/s03.vue'
+import s04 from './containers/s04.vue'
+import s05 from './containers/s05.vue'
+import s06 from './containers/s06.vue'
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
@@ -34,6 +39,27 @@ router.map({
         name: "s01",
         component: s01
     },
+    's02': {
+        name: "s02",
+        component: s02
+    },
+    's03': {
+        name: "s03",
+        component: s03
+    },
+    's04': {
+        name: "s04",
+        component: s04
+    },
+    's05': {
+        name: "s05",
+        component: s05
+    },
+    's06': {
+        name: "s06",
+        component: s06
+    },
+
     'base': {
         name: 'base',
         component: Base,
