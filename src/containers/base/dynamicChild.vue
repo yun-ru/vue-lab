@@ -10,6 +10,7 @@
     <div>
         <button class="btn btn-default" @click='changeChild("bar")'>Bar</button>
         <button class="btn btn-default" @click='changeChild("foo")'>Foo</button>
+        <button class="btn btn-default" @click='changeChild("baz")'>Baz</button>
     </div>
     <br>
     <div class="row">
@@ -27,6 +28,7 @@
 <script>
     import Foo from '../../components/foo.vue';
     import Bar from '../../components/bar.vue';
+    import Baz from '../../components/baz.vue';
     export default {
         data() {
             return {
@@ -45,6 +47,7 @@
         components: {
             foo: Foo,
             bar: Bar,
+            baz: Baz,
             ruby: {
                 template: "<h1>Hi Ruby</p>"
             },

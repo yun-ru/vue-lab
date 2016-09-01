@@ -12,6 +12,7 @@ import Router from './containers/base/router.vue';
 import Slot from './containers/base/slot.vue';
 import DynamicChild from './containers/base/dynamicChild.vue';
 import Props from './containers/base/props.vue';
+import Component from './containers/base/component.vue';
 
 
 Vue.use(VueRouter);
@@ -35,6 +36,10 @@ router.map({
             '/props': {
                 name: 'props',
                 component: Props
+            },
+            '/component': {
+                name: 'component',
+                component: Component
             },
             '/dynamic-child': {
                 name: 'dynamicChild',
