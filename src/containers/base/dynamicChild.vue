@@ -16,11 +16,11 @@
     <div class="row">
         <div class="col-sm-6">
             <p class="text-muted">Change Child to (keep alive) ...</p>
-            <component :is='myChild' keep-alive></component>
+            <component :is='myChild' name="Ruby" keep-alive></component>
         </div>
         <div class="col-sm-6">
             <p class="text-muted">Change Child to ...</p>
-            <component :is='myChild'></component>
+            <component :is='myChild' name="Ruby"></component>
         </div>
     </div>
 </template>

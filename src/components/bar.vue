@@ -1,20 +1,21 @@
 <template>
-    <h3>{{msg}}</h3>
+    <h3>{{name}}</h3>
     <h3>{{num}}</h3>
     <p class="text-info">{{$route.params.msg}}</p>
 </template>
 
 <script>
     export default {
+        replace: false,
         data() {
             return {
                 title: "bar"
             }
         },
         props: {
-            msg: {
-                coerce(name) {
-                    return name + ' is a good guy!'
+            name: {
+                coerce(val) {
+                    return val + ' is a good guy!'
                 }
             },
             num: {
