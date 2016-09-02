@@ -10,12 +10,12 @@
                 <a v-link='{name: "s04"}'>04. Conditional Rendering</a>
                 <a v-link='{name: "s05"}'>05. List Rendering</a>
                 <a v-link='{name: "s06"}'>06. Methods and Event Handling</a>
-                <a v-link='{name: "base"}'>07. Form Input Bindings</a>
-                <a v-link='{name: "base"}'>08. Transitions</a>
-                <a v-link='{name: "base"}'>09. Components</a>
-                <a v-link='{name: "base"}'>10. Reactivity in Depth</a>
-                <a v-link='{name: "base"}'>11. Custom Directives</a>
-                <a v-link='{name: "base"}'>12. Custom Filters</a>
+                <a v-link='{name: "s07"}'>07. Form Input Bindings</a>
+                <a v-link='{name: "s08"}'>08. Transitions</a>
+                <a v-link='{name: "s09"}'>09. Components</a>
+                <a v-link='{name: "s10"}'>10. Reactivity in Depth</a>
+                <a v-link='{name: "s11"}'>11. Custom Directives</a>
+                <a v-link='{name: "s12"}'>12. Custom Filters</a>
                 <a v-link='{name: "base"}'>13. Mixins</a>
             </nav>
 
