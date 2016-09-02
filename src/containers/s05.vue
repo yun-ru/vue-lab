@@ -25,7 +25,6 @@
         <li v-for="(k,v) in info">{{k}} - {{v}}</li>
     </ul>
 
-
     <div>
         <p v-for="n in 6">{{$index}} - {{n}}</p>
     </div>

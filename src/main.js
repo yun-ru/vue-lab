@@ -21,6 +21,12 @@ import s03 from './containers/s03.vue'
 import s04 from './containers/s04.vue'
 import s05 from './containers/s05.vue'
 import s06 from './containers/s06.vue'
+import s07 from './containers/s07.vue'
+import s08 from './containers/s08.vue'
+import s09 from './containers/s09.vue'
+import s10 from './containers/s10.vue'
+import s11 from './containers/s11.vue'
+import s12 from './containers/s12.vue'
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
@@ -58,6 +64,30 @@ router.map({
     's06': {
         name: "s06",
         component: s06
+    },
+    's07': {
+        name: "s07",
+        component: s07
+    },
+    's08': {
+        name: "s08",
+        component: s08
+    },
+    's09': {
+        name: "s09",
+        component: s09
+    },
+    's10': {
+        name: "s10",
+        component: s10
+    },
+    's11': {
+        name: "s11",
+        component: s11
+    },
+    's12': {
+        name: "s12",
+        component: s12
     },
 
     'base': {
