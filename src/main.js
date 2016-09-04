@@ -1,18 +1,20 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
-import App from './containers/app.vue';
-import Welcome from './containers/welcome.vue';
-import Foo from './components/foo.vue';
-import Bar from './components/bar.vue';
-import Base from './containers/base/index.vue';
-import Emit from './containers/base/emit.vue';
-import Resource from './containers/base/resource.vue';
-import Router from './containers/base/router.vue';
-import Slot from './containers/base/slot.vue';
-import DynamicChild from './containers/base/dynamicChild.vue';
-import Props from './containers/base/props.vue';
-import Component from './containers/base/component.vue';
+import VueAnimatedList from 'vue-animated-list'
+
+import App from './containers/app.vue'
+import Welcome from './containers/welcome.vue'
+import Foo from './components/foo.vue'
+import Bar from './components/bar.vue'
+import Base from './containers/base/index.vue'
+import Emit from './containers/base/emit.vue'
+import Resource from './containers/base/resource.vue'
+import Router from './containers/base/router.vue'
+import Slot from './containers/base/slot.vue'
+import DynamicChild from './containers/base/dynamicChild.vue'
+import Props from './containers/base/props.vue'
+import Component from './containers/base/component.vue'
 
 
 import s01 from './containers/s01.vue'
@@ -28,13 +30,14 @@ import s10 from './containers/s10.vue'
 import s11 from './containers/s11.vue'
 import s12 from './containers/s12.vue'
 
-Vue.use(VueRouter);
-Vue.use(VueResource);
+Vue.use(VueAnimatedList)
+Vue.use(VueRouter)
+Vue.use(VueResource)
 
-console.log(Vue.config);
-Vue.config.debug = true;
+console.log(Vue.config)
+Vue.config.debug = true
 
-var router = new VueRouter();
+var router = new VueRouter()
 
 router.map({
     '/': {
@@ -148,19 +151,19 @@ router.map({
 
 router.redirect({
   '*': '/'
-});
+})
 
 router.beforeEach(function ({ to, next }) {
   if (to.path === '/base/router') {
-      sessionStorage.setItem("isLogin",1);
+      sessionStorage.setItem("isLogin",1)
       return sessionStorage.getItem("isLogin")-0 ? true : false
   } else {
     next()
   }
 })
 router.afterEach(function (transition) {
-  console.log(transition.to);
-  console.log(transition);
+  console.log(transition.to)
+  console.log(transition)
 })
 
-router.start(App, 'body');
+router.start(App, 'body')

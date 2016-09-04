@@ -4,7 +4,7 @@
     <div>
         <button class="btn btn-default" @click="changeAnimateChild('ruby')">Ruby</button>
         <button class="btn btn-default" @click="changeAnimateChild('daniel')">Daniel</button>
-        <component :is='animateChild' transition="fade" transition-mode="out-in"></component>
+        <component :is='animateChild' transition="test-fade" transition-mode="out-in"></component>
     </div>
     <hr>
     <div>
@@ -60,16 +60,16 @@
 </script>
 
 <style>
-    .fade-transition {
+    .test-fade-transition {
         transition: all .3s ease;
     }
-    .fade-enter, .fade-leave {
+    .test-fade-enter, .test-fade-leave {
         opacity: 0;
     }
-    .fade-enter{
+    .test-fade-enter{
         transform: translateX(-50px)
     }
-    .fade-leave{
+    .test-fade-leave{
         transform: translateX(50px);
     }
 </style>
