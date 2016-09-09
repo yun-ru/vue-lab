@@ -34,7 +34,7 @@ Vue.use(VueAnimatedList)
 Vue.use(VueRouter)
 Vue.use(VueResource)
 
-console.log(Vue.config)
+// console.log(Vue.config)
 Vue.config.debug = true
 
 var router = new VueRouter()
